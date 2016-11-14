@@ -1,0 +1,25 @@
+{% extends "EzPublishCoreBundle::content_fields.html.twig" %}
+
+{% block ezoption_field %}
+    {# Parameters (not required) for this type field template :     #}
+    {#      - classes           : add classes to div tag container  #}
+    {#      - name              : name of select                    #}
+    {#      - selected          : id of item that is select         #}
+    {#      - add_empty_option  : if true add in first position of  #}
+    {#                            select an empty option            #}
+    {% spaceless %}
+        <div class="ezoption{% if classes is defined %} {{ classes }}{% endif %}">
+            <label class="ezoption--name"{% if name is defined %} for="{{ name }}"{% endif %}>{{ field.value.name }}</label>
+            <select {% if name is defined %}name="{{ name }}"{% endif %} class="ezoption--options">
+                {% if add_empty_option is defined and add_empty_option %}
+                    <option value=""></option>
+                {% endif %}
+                {% for option in field.value.options %}
+                    <option value="{{ option.id }}"
+                            {% if selected is defined and
+                                  selected == option.id %}selected{% endif %}>{{ option.text }}{% if option.additionalPrice is not empty %} - {{ option.additionalPrice }}{% endif %}</option>
+                {% endfor %}
+            </select>
+        </div>
+    {% endspaceless %}
+{% endblock %}

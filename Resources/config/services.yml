@@ -1,0 +1,18 @@
+services:
+#    ez_systems_option_field_type.example:
+#        class: Kaliop\EzOptionFieldTypeBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+    # override ezpublish.fieldType.ezoption in vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/settings/fieldtypes.yml
+    ezpublish.fieldType.ezoption:
+        class: Kaliop\EzOptionFieldTypeBundle\eZ\Publish\FieldType\Option\Type
+        parent: ezpublish.fieldType
+        arguments: [ "ezoption" ]
+        tags:
+            - { name: ezpublish.fieldType, alias: ezoption }
+
+    # override ezpublish.fieldType.ezoption.converter in vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/settings/storage_engines/legacy/field_value_converters.yml
+    ezpublish.fieldType.ezoption.converter:
+        class: Kaliop\EzOptionFieldTypeBundle\eZ\Publish\FieldType\Option\OptionConverter
+        tags:
+            - { name: ezpublish.storageEngine.legacy.converter, alias: ezoption }
