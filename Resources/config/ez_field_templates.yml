@@ -1,4 +1,4 @@
 system:
     default:
         field_templates:
-            - {template: KaliopEzOptionFieldTypeBundle:fields:ezoption.html.twig, priority: 10}
+            - {template: KaliopEzOptionFieldTypeBundle:fields:ezoption.html.twig}
