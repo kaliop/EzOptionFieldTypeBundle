@@ -14,5 +14,5 @@ Usage examples can be found [here](USAGE.md).
 License
 -------
 
-This bundle is released under the MIT license. See the included
+This bundle is released under the GNU GPL license. See the included
 [LICENSE](LICENSE) file for more information.
