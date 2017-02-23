@@ -44,17 +44,20 @@ class OptionConverter implements Converter
 
         $xml = new \SimpleXMLElement('<ezoption/>');
         $xmlName = $xml->addChild('name');
-        $this->appendCData($xmlName, $data['name']);
+        $this->appendCData($xmlName, isset($data['name']) ? $data['name'] : '');
 
         $xmlOptions = $xml->addChild('options');
+
+        if (isset($data['options'])) {
         /** @var OptionElement[] $options */
-        $options = $data['options'];
-        foreach ($options as $option) {
-            /** @noinspection DisconnectedForeachInstructionInspection */
-            $xmlOption = $xmlOptions->addChild('option');
-            $this->appendCData($xmlOption, $option['text']);
-            $xmlOption->addAttribute('additional_price', $option['additional_price']);
-            $xmlOption->addAttribute('id', $option['id']);
+            $options = $data['options'];
+            foreach ($options as $option) {
+                /** @noinspection DisconnectedForeachInstructionInspection */
+                $xmlOption = $xmlOptions->addChild('option');
+                $this->appendCData($xmlOption, $option['text']);
+                $xmlOption->addAttribute('additional_price', $option['additional_price']);
+                $xmlOption->addAttribute('id', $option['id']);
+            }
         }
 
         return $xml->asXML();
