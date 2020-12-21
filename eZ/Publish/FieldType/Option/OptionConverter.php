@@ -185,5 +185,4 @@ class OptionConverter implements Converter
     {
         // TODO: Implement toFieldDefinition() method.
     }
-
 }
