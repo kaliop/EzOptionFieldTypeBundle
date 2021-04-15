@@ -6,11 +6,6 @@ use eZ\Publish\Core\Base\Exceptions\InvalidArgumentType;
 use eZ\Publish\Core\FieldType\Value as BaseValue;
 use Symfony\Component\Config\Definition\Exception\DuplicateKeyException;
 
-/**
- * Class Value for ezOption field type
- *
- * @package Kaliop\EzOptionFieldTypeBundle\eZ\Publish\FieldType\Option
- */
 class Value extends BaseValue
 {
 

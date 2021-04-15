@@ -10,11 +10,8 @@ use eZ\Publish\Core\FieldType\Value as CoreValue;
 use eZ\Publish\SPI\FieldType\Value as SPIValue;
 use eZ\Publish\SPI\Persistence\Content\FieldValue as PersistenceValue;
 use Kaliop\EzOptionFieldTypeBundle\eZ\Publish\FieldType\Option\Value as OptionValue;
-/**
- * Class Type
- *
- * @package Kaliop\EzOptionFieldTypeBundle\eZ\Publish\FieldType\Option
- */
+
+
 class Type extends FieldType
 {
     /**

@@ -2,11 +2,6 @@
 
 namespace Kaliop\EzOptionFieldTypeBundle\eZ\Publish\FieldType\Option;
 
-/**
- * Class OptionElement
- *
- * @package Kaliop\EzOptionFieldTypeBundle\eZ\Publish\FieldType\Option
- */
 class OptionElement
 {
     /**

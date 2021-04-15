@@ -1,6 +1,6 @@
 {
   "name": "kaliop/ezoptionfieldtypebundle",
-  "description": "EzOption FieldType for eZ Publish Platform",
+  "description": "EzOption FieldType for eZPublishPlatform / eZPlatform",
   "license": "GPL-2.0",
   "keywords": ["ezpublish", "ezoption"],
   "authors": [
@@ -16,10 +16,10 @@
   "autoload": {
     "psr-4": {"Kaliop\\EzOptionFieldTypeBundle\\": ""}
   },
-    "funding": [
-        {
-            "type": "github",
-            "url": "https://github.com/sponsors/tanoconsulting"
-        }
-    ]
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/tanoconsulting"
+    }
+  ]
 }

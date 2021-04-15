@@ -1,5 +1,5 @@
 KaliopEzOptionFieldTypeBundle
-==================
+=============================
 
 Introduction
 ------------
@@ -9,7 +9,7 @@ This bundle provides eZOption field type for eZPlatform.
 Documentation
 -------------
 
-Usage examples can be found [here](USAGE.md). 
+Usage examples can be found [here](USAGE.md).
 
 License
 -------

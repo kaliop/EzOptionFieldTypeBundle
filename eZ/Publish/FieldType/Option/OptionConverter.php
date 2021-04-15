@@ -8,11 +8,6 @@ use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue;
 use eZ\Publish\SPI\Persistence\Content\FieldValue;
 use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition;
 
-/**
- * Class LegacyConverter
- *
- * @package Kaliop\EzOptionFieldTypeBundle\eZ\Publish\FieldType\Option
- */
 class OptionConverter implements Converter
 {
     public static function create()
